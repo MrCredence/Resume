@@ -1,0 +1,274 @@
+/* Reset all default property*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #222;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling*/
+.header {
+    background: lightgray;
+    padding: 30px 20px;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 4px solid #4682B4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.header-text h1 {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.header-text p {
+    margin: 6px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.header-text address {
+    font-style: normal;
+    color: #555;
+    line-height: 1.6;
+}
+
+.header-text a {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+.header-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Navigation-Section styling */
+nav {
+    margin: 20px 0;
+    text-align: center;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 12px;
+    border-radius: 12px;
+    position: sticky;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #ffd54f;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/*Sections styling*/
+section {
+    background: lightgray;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeUp 0.8s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+h2 {
+    margin-bottom: 12px;
+    color: #4a148c;
+    border-left: 6px solid #7c4dff;
+    padding-left: 10px;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/*Table Styling*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    background: #7c4dff;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f3e5f5;
+}
+
+tr:hover {
+    background: #e1bee7;
+    transition: 0.3s;
+}
+
+/*Skills-List styling*/
+ul li, ol li {
+    margin: 6px 0;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+ul li:hover, ol li:hover {
+    background: #ede7f6;
+    transform: translateX(6px);
+}
+
+/*Projects*/
+article {
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border-left: 5px solid #7c4dff;
+    transition: 0.3s;
+}
+
+article:hover {
+    background: #f3e5f5;
+}
+
+/*Form Styling*/
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #7c4dff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(124,77,255,0.4);
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #7c4dff, #448aff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/*Footer-section styling*/
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffd54f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Animations*/
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*styling forResponsive*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
